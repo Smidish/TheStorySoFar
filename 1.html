@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/ath5zfj.css">
+	<script src="https://kit.fontawesome.com/e6ad78742e.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+	<audio src="content/Vangelis-Conquest-Of-Paradise.mp3" id="audio"></audio>
+	
+	<img src="screens/1.png">
+	<div class="div-kiddo">
+
+		<!-- Play/Pause Button --> 
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play()"></i>
+
+
+		<!-- Text Input --> 
+		<input type="text" id="answer" class="input_field" name="answer" hidden/>
+
+		<!-- Select Button --> 
+		<button type="button" onclick="location.href='2.html'"id="btn_riddle" class="filled_button" name="btn_riddle">Mit KT gehen</button>
+		<button type="button" onclick="location.href='3.html'"id="btn_riddle" class="filled_button" name="btn_riddle">Zu Moe chillen</button>
+
+
+		<!-- Navi button --> 
+		<a hidden href="https://www.google.com/maps/search/?api=1&query=52.116215, 11.629097"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+
+	</div>
+
+
+
+
+
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+
+</body>
+</html>
