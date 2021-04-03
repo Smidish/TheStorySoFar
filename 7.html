@@ -11,24 +11,29 @@
 <body>
 	<audio src="" id="audio"></audio>
 	
-	<img src="screens/2_1.png">
+	<audio src="" id="audio"></audio>
+	
+	
 	<div class="div-kiddo">
-
+		<img src="screens/7_1.png">
 		<!-- Play/Pause Button --> 
 		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play()"></i>
 
-
+	</div>
+	
+	<!-- Div riddle --> 
+	<div class="div_riddle" hidden>
+		<img src="screens/6_1.png">
 		<!-- Text Input --> 
-		<input type="text" id="answer" class="input_field" name="answer" hidden/>
+		<input type="text" id="answer" class="input_field" name="answer" />
+		<button type="button" onclick="" id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
+	</div>
 
-		<!-- Select Button --> 
-		<button type="button" onclick="location.href='2.html'"id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
+	<!-- Div Lösung riddle, Hint Insta KT, Weiterleitung zu Message Page 11 --> 
+	<div class="div_msg" hidden>
 
-
-
-		<!-- Navi button --> 
-		<a hidden href="https://www.google.com/maps/search/?api=1&query=52.116215, 11.629097"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
-
+		<img src="screens/6_1.png">
+		<button type="button" onclick="location.href='11.html'" id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
 	</div>
 
 

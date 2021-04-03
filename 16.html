@@ -11,28 +11,18 @@
 <body>
 	<audio src="" id="audio"></audio>
 	
-	<img src="screens/2_1.png">
-	<div class="div-kiddo">
-
-		<!-- Play/Pause Button --> 
-		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play()"></i>
-
-
-		<!-- Text Input --> 
-		<input type="text" id="answer" class="input_field" name="answer" hidden/>
-
-		<!-- Select Button --> 
-		<button type="button" onclick="location.href='2.html'"id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
-
-
-
-		<!-- Navi button --> 
-		<a hidden href="https://www.google.com/maps/search/?api=1&query=52.116215, 11.629097"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
-
+	<div class="div-kiddo" id="div_start">
+		<img src="screens/16_1.png">
+		<!-- Auswahl Juli oder Party -->
+		<button type="button" onclick="swDiv(div_start, div_pol)" id="btn_2" class="filled_button" name="btn_2e">Zur Polizei gehen</button>
 	</div>
+		
 
-
-
+		<!-- Opt Police--> 
+		<div id="div_pol" hidden>
+			<img src="screens/16_1.png">
+			<a href="https://www.google.com/maps/search/?api=1&query=52.13003803420924, 11.627614274491277"><button type="button" id="btn_loc1" class="round_button" name="btn_loc1" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+		</div>
 
 
 	<script src="jquery-3.6.0.min.js"></script>

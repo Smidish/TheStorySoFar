@@ -11,29 +11,36 @@
 <body>
 	<audio src="" id="audio"></audio>
 	
-	<img src="screens/2_1.png">
-	<div class="div-kiddo">
+	<div class="div-kiddo" id="div_start">
 
+	<img src="screens/5_1.png">
 		<!-- Play/Pause Button --> 
 		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play()"></i>
 
-
-		<!-- Text Input --> 
-		<input type="text" id="answer" class="input_field" name="answer" hidden/>
-
 		<!-- Select Button --> 
-		<button type="button" onclick="location.href='2.html'"id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
-
-
-
-		<!-- Navi button --> 
-		<a hidden href="https://www.google.com/maps/search/?api=1&query=52.116215, 11.629097"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+		<button type="button" onclick="swDiv(div_start, div_juli)" id="btn_juli" class="filled_button" name="btn_juli">Mit Juli gehen</button>
+		<button type="button" onclick="swDiv(div_start, div_kt)" id="btn_kt" class="filled_button" name="btn_kt">Mit KT rauchen</button>
+		<button type="button" onclick="swDiv(div_start, div_van)" id="btn_van" class="filled_button" name="btn_van">Bei Van chillen</button>
 
 	</div>
 
+	<!-- Opt Juli --> 
+	<div id="div_juli" hidden>
+		<img class="juli">
+		<a href="https://www.google.com/maps/search/?api=1&query=52.1213990078281, 11.628639899459573"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+	</div>
 
+	<!-- Opt KT --> 
+	<div id="div_kt" hidden>
+		<img class="kt">
+		<a href="https://www.google.com/maps/search/?api=1&query=52.12061509765692, 11.628082012767514"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+	</div>
 
-
+	<!-- Opt Van --> 
+	<div id="div_van" hidden>
+		<img class="van">
+		<a href="https://www.google.com/maps/search/?api=1&query=52.11658039894957, 11.635732137899062"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+	</div>
 
 	<script src="jquery-3.6.0.min.js"></script>
 	<script src="script.js"></script>

@@ -11,7 +11,9 @@
 <body>
 	<audio src="" id="audio"></audio>
 	
-	<img src="screens/2_1.png">
+	<img id="person_img" src="screens/4_1.png">
+	<img id="img_2" src="screens/riddle1.png" hidden>
+	<img id="img_3" src="screens/4_2.png" hidden>
 	<div class="div-kiddo">
 
 		<!-- Play/Pause Button --> 
@@ -22,17 +24,35 @@
 		<input type="text" id="answer" class="input_field" name="answer" hidden/>
 
 		<!-- Select Button --> 
-		<button type="button" onclick="location.href='2.html'"id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
+		<button type="button" onclick="switchPic()" id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
 
+
+		<button hidden type="button" onclick="getInputValue();" class="filled_button" id="btn_input">Antworten</button>
 
 
 		<!-- Navi button --> 
-		<a hidden href="https://www.google.com/maps/search/?api=1&query=52.116215, 11.629097"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
-
+		<a id="nav_btn" hidden href="https://www.google.com/maps/search/?api=1&query=52.119438883102745, 11.63087307935136"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
 	</div>
 
 
-
+		<script>
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("answer").value;
+            if(inputVal == "51241"){
+            	document.getElementById("nav_btn").style.display = "block";
+            	document.getElementById('img_2').style.display = "none";
+            	document.getElementById('answer').style.display = "none";
+            	document.getElementById('btn_input').style.display = "none";
+            	document.getElementById('img_3').style.display = "block";
+            	document.getElementById('play').style.display = "block";
+            	document.getElementById('audio').src="content/Vangelis-Conquest-Of-Paradise.mp3";
+            }
+            else{
+            	 alert("Nope");
+            }
+        }
+    	</script>
 
 
 	<script src="jquery-3.6.0.min.js"></script>

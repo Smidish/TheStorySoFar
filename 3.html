@@ -18,6 +18,8 @@
 
 		<!-- Play/Pause Button --> 
 		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play()"></i>
+		<i hidden class="fas-middle fas fa-play fa-8x" id="play2" onclick="play2()"></i>
+
 
 
 		<!-- Text Input --> 
@@ -31,7 +33,7 @@
 
 
 		<!-- Navi button --> 
-		<a id="nav_btn" hidden href="https://www.google.com/maps/search/?api=1&query=52.116215, 11.629097"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+		<a id="nav_btn" hidden href="https://www.google.com/maps/search/?api=1&query=52.119438883102745, 11.63087307935136"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
 	</div>
 
 
@@ -45,7 +47,8 @@
             	document.getElementById('answer').style.display = "none";
             	document.getElementById('btn_input').style.display = "none";
             	document.getElementById('img_3').style.display = "block";
-
+				document.getElementById('play').style.display = "block";
+				document.getElementById('audio').src="";
             }
             else{
             	 alert("Nope");

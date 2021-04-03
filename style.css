@@ -1,3 +1,4 @@
+/* I am very well aware that this is a complete chaos. But it's my chaos! :D */
 body{
     background-image: url('screens/bg.png');
     background-attachment:inherit;
@@ -21,7 +22,7 @@ h1, p, a, button, input{
 	display: inline-block;
 	text-align: center;
 	align-self: center;
-	position: absolute;
+	/*position: absolute;*/
 	bottom: 5%;
  
 }
@@ -51,6 +52,10 @@ img{
     */
 }
 
+a{
+    margin-left: auto;
+  margin-right: auto;
+}
 
  .filled_button, .input_field, .round_button{
 
@@ -89,5 +94,19 @@ img{
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
+  margin-bottom: 100px;
   padding-bottom: 15px;
+}
+
+.juli{
+  content:url(screens/4_1.png);
+}
+.kt{
+  content:url(screens/2_1.png);
+}
+.van{
+  content:url(screens/17_2.png);
+}
+.moe{
+  content:url(screens/3_1.png);
 }

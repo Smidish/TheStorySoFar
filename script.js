@@ -12,6 +12,20 @@ function play() {
             
         }
     }
+    function play2() {
+        var audio = document.getElementById('audio2');
+        if (audio.paused) {
+            audio.play();
+            $('#play2').removeClass('fa-play')
+            $('#play2').addClass('fa-pause')
+        }else{
+            audio.pause();
+            audio.currentTime = 0
+            $('#play2').removeClass('fa-pause')
+            $('#play2').addClass('fa-play')
+            
+        }
+    }
 
     function switchPic(){
         var pic1 = document.getElementById('person_img');
@@ -28,4 +42,11 @@ function play() {
         pic2.style.display = "block";
         input.style.display = "block";
         btn_input.style.display = "block";
+    }
+
+    //I know, why didn't I do this in the first place? Ah yes, because of my bloodshed with CSS
+    function swDiv(divToHide, divToShow){
+        divToHide.style.display = "none";
+        divToShow.style.display = "block";
+        $(divToShow).addClass("div-kiddo");
     }

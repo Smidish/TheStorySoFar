@@ -1,0 +1,55 @@
+<!-- I do regret hardcoding most of this :'D -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/ath5zfj.css">
+	<script src="https://kit.fontawesome.com/e6ad78742e.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+	<audio src="" id="audio"></audio>
+	
+
+	<!-- Group Chat --> 
+	
+	<div class="div-kiddo" id="div_start">
+		<button type="button" onclick="location.href='info.html'" id="btn_3" class="filled_button" name="btn_info">Info</button>
+		<img src="screens/0_1.png">
+		<!-- Auswahl Juli oder Party -->
+		<button type="button" onclick="swDiv(div_start, div_juli)" id="btn_2" class="filled_button" name="btn_2e">Zu Juli</button>
+		<button type="button" onclick="swDiv(div_start, div_party)" id="btn_3" class="filled_button" name="btn_riddle3">Zur Party</button>
+
+	</div>
+		<!-- Opt Juli--> 
+		<div id="div_juli" hidden>
+			<img class="juli">
+			<a href="https://www.google.com/maps/search/?api=1&query=52.122472196965965, 11.629952633640098"><button type="button" id="btn_loc4" class="round_button" name="btn_loc4" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+		</div>
+
+		<!-- Opt Party--> 
+		<div id="div_party" hidden>
+			<img src="screens/1.png">
+			<a href="https://www.google.com/maps/search/?api=1&query=52.116215,11.629097"><button type="button" id="btn_loc1" class="round_button" name="btn_loc1" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+		</div>
+
+		<!-- Opt Info TODO--> 
+		<div class="div-kiddo" id="div_info" hidden>
+
+		</div>
+			
+		
+
+	</div>
+
+
+
+
+
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+
+</body>
+</html>
