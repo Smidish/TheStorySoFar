@@ -9,32 +9,54 @@
 
 
 <body>
-	<audio src="" id="audio"></audio>
+	<audio src="audio/6_1.mp3" id="audio1"></audio>
+	<audio src="audio/6_2.mp3" id="audio2"></audio>
 	
 	
-	<div class="div-kiddo">
+	<div class="div-kiddo" id="div_start">
 		<img src="screens/6_1.png">
 		<!-- Play/Pause Button --> 
-		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play()"></i>
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio1')"></i>
+		<button type="button" onclick="swDiv(div_start, div_2)" id="btn_2" class="filled_button" name="btn_2e">Sie meinte irgendwas mit Online Stuff</button>
+		<button type="button" onclick="swDiv(div_start, div_2)" id="btn_2" class="filled_button" name="btn_2e">Nicht wirklich...</button>
+
+	</div>
+
+	<div id="div_2" hidden>
+		<img src="screens/6_1.png">
+		<!-- Play/Pause Button --> 
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio2')"></i>
+		<button type="button" onclick="swDiv(div_2, div_riddle)" id="btn_2" class="filled_button" name="btn_2e">Ja, zeig mal.</button>
+
 
 	</div>
 
 	<!-- Div riddle --> 
-	<div class="div_riddle" hidden>
-		<img src="screens/6_1.png">
+	<div id="div_riddle" hidden>
+		<img src="screens/riddle_2.png">
 		<!-- Text Input --> 
 		<input type="text" id="answer" class="input_field" name="answer" />
-		<button type="button" onclick="" id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
+		<button type="button" onclick="getInputValue();" id="btn_riddle" class="filled_button" name="btn_riddle" >Weiter</button>
 	</div>
 
 	<!-- Div Lösung riddle, Hint insta Andre, Weiterleitung zu Message Page 11 --> 
-	<div class="div_msg" hidden>
-
-		<img src="screens/6_1.png">
+	<div id="div_msg" hidden>
+		<img src="screens/6_3.png">
 		<button type="button" onclick="location.href='11.html'" id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
 	</div>
 
-
+	<script>
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("answer").value;
+            if(inputVal == "1"){
+            swDiv(div_riddle, div_msg);
+            }
+            else{
+            	 alert("Nope");
+            }
+        }
+    	</script>
 
 	<script src="jquery-3.6.0.min.js"></script>
 	<script src="script.js"></script>

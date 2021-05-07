@@ -9,15 +9,28 @@
 
 
 <body>
-	<audio src="" id="audio"></audio>
+	<audio src="audio/8_1.mp3" id="audio1"></audio>
+	<audio src="audio/8_2.mp3" id="audio2"></audio>
 	
 	<div class="div-kiddo" id="div_start">
 		<img src="screens/8_1.png">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio1')"></i>
+		<button type="button" onclick="swDiv(div_start, div_2)" id="btn_2" class="filled_button" name="">Juli Wasser holen</button>
+		<button type="button" onclick="swDiv(div_start, div_2)" id="btn_2" class="filled_button" name="">Andre Wasser holen schicken</button>
+	</div>
+
+	<div id="div_2" hidden>
+		<img src="screens/8_1.png">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio2')"></i>
 		<!-- Auswahl Juli oder Party -->
-		<button type="button" onclick="swDiv(div_start, div_party)" id="btn_2" class="filled_button" name="btn_2e">Zur Party zurück</button>
-		<button type="button" onclick="location.href='9.html'" id="btn_3" class="filled_button" name="btn_riddle3">Andre überzeugen, zu gehen</button>
+		<button type="button" onclick="swDiv(div_2, div_party)" id="btn_2" class="filled_button" name="">Zur Party zurück</button>
+		<button type="button" onclick="location.href='10.html'" id="btn_3" class="filled_button" name="">Juli selbst heimbringen</button>
 	</div>
 		<!-- Opt Juli--> 
+		<div id="div_juli" hidden>
+			<img class="juli"/>
+			<a href="https://www.google.com/maps/search/?api=1&query=52.12402375645683,%2011.62918116700505"><button type="button" id="btn_loc1" class="round_button" name="btn_loc1" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+		</div>
 
 		<!-- Opt Party--> 
 		<div id="div_party" hidden>

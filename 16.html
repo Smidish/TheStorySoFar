@@ -9,19 +9,15 @@
 
 
 <body>
-	<audio src="" id="audio"></audio>
-	
-	<div class="div-kiddo" id="div_start">
-		<img src="screens/16_1.png">
-		<!-- Auswahl Juli oder Party -->
-		<button type="button" onclick="swDiv(div_start, div_pol)" id="btn_2" class="filled_button" name="btn_2e">Zur Polizei gehen</button>
-	</div>
-		
+	<audio src="audio/123polizei.mp3" id="audio4"></audio>
 
 		<!-- Opt Police--> 
-		<div id="div_pol" hidden>
+		<div id="div_start" class="div-kiddo">
 			<img src="screens/16_1.png">
-			<a href="https://www.google.com/maps/search/?api=1&query=52.13003803420924, 11.627614274491277"><button type="button" id="btn_loc1" class="round_button" name="btn_loc1" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+			<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio4')"></i>
+			<button type="button" onclick="location.href='cyber.html'" id="btn_2" class="filled_button" name="btn_2e">Mehr zu deinen Rechten</button>
+					<button type="button" onclick="location.href='question.html'" id="btn_1" class="filled_button" name="btn_1e">Frage stellen</button>
+
 		</div>
 
 

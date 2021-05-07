@@ -9,27 +9,36 @@
 
 
 <body>
-	<audio src="" id="audio"></audio>
+	<audio src="audio/13_1.mp3" id="audio1"></audio>
+	<audio src="audio/13_2.mp3" id="audio2"></audio>
 	
-	<img src="screens/13_1.png">
-	<div class="div-kiddo">
-
+	
+	<div class="div-kiddo" id="div_start">
+		<img class="juli">
 		<!-- Play/Pause Button --> 
-		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play()"></i>
-
-
-		<!-- Text Input --> 
-		<input type="text" id="answer" class="input_field" name="answer" hidden/>
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio1')"></i>
 
 		<!-- Select Button --> 
-		<button type="button" onclick="location.href='2.html'"id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
+		<button type="button" onclick="swDiv(div_start, div_2)"id="btn_riddle" class="filled_button" name="btn_riddle">Wow, du bist echt betrunken...</button>
+		<button type="button" onclick="swDiv(div_start, div_2)"id="btn_riddle" class="filled_button" name="btn_riddle">Deine Nachricht klang ungut, alles okay?</button>
+	</div>
 
+	<div id="div_2" hidden>
+		<img class="juli">
+		<!-- Play/Pause Button --> 
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio2')"></i>
+		<button type="button" onclick="window.open('consent.html')" id="btn_riddle" class="filled_button" name="btn_riddle">Mehr zu Consent</button>
+		<button type="button" onclick="location.href='17.html'" id="btn_riddle" class="filled_button" name="btn_riddle">Nachricht von Van anhören</button>
+	</div>
 
-
+	<div id="div_nav" hidden>
 		<!-- Navi button --> 
-		<a hidden href="https://www.google.com/maps/search/?api=1&query=52.116215, 11.629097"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+		<a  href="https://www.google.com/maps/search/?api=1&query=52.116215, 11.629097"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+	</div>
 
 	</div>
+
+
 
 
 

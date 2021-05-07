@@ -9,13 +9,24 @@
 
 
 <body>
-	<audio src="" id="audio"></audio>
+	<audio src="audio/12_1.mp3" id="audio1"></audio>
+	<audio src="audio/12_2.mp3" id="audio2"></audio>
 	
-	<div class="div-kiddo" id="div_start">
+	<div id="div_start">
+	</div>
+
+	<div class="" id="div_bad" hidden>
 		<img src="screens/12_1.png">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio1')"></i>
 		<!-- Auswahl Juli oder Party -->
-		<button type="button" onclick="swDiv(div_start, div_aids)" id="btn_2" class="filled_button" name="btn_2e">Zum AIDS Test</button>
-		<button type="button" onclick="swDiv(div_start, div_hilfe)" id="btn_3" class="filled_button" name="btn_riddle3">Zur Jugendhilfe</button>
+		<button type="button" onclick="swDiv(div_bad, div_2)" id="btn_2" class="filled_button" name="btn_2e">Fuck...dann sollten wir Hilfe holen oder dich testen lassen...</button>
+	</div>
+
+	<div hidden id="div_2">
+		<img src="screens/12_1.png">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio2')"></i>
+		<button type="button" onclick="swDiv(div_2, div_aids)" id="btn_2" class="filled_button" name="btn_2e">Hey, kein Stress. Lass mich die Lage wegen Testen erstmal auschecken, okay?</button>
+		<button type="button" onclick="swDiv(div_2, div_hilfe)" id="btn_2" class="filled_button" name="btn_2e">Ich kenn da jm bei der Jugendhilfe...</button>
 	</div>
 
 		<!-- Opt Aids--> 
@@ -33,6 +44,18 @@
 
 	<script src="jquery-3.6.0.min.js"></script>
 	<script src="script.js"></script>
+	<script>
+		//yes I was lazy and did random instead of timer^^
+			(function() {
+			var ran= Math.floor(Math.random() * 2); 
+			if(ran==1){
+				window.location.href = "13.html";
+			}
+			else{
+				swDiv(div_start, div_bad);
+			}
+			})();
+		</script>
 
 </body>
 </html>

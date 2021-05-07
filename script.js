@@ -1,5 +1,5 @@
-function play() {
-        var audio = document.getElementById('audio');
+function play(audID) {
+        var audio = document.getElementById(audID);
         if (audio.paused) {
             audio.play();
             $('#play').removeClass('fa-play')

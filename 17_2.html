@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/ath5zfj.css">
+	<script src="https://kit.fontawesome.com/e6ad78742e.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- THIS IS MOE. VAN IS 17_0. Remember to double check the links -->
+<body>
+	<audio src="audio/17_1_5.mp3" id="audio1"></audio>
+	<audio src="audio/17_1_6.mp3" id="audio2"></audio>
+	<audio src="audio/17_1_7.mp3" id="audio3"></audio>
+	<audio src="audio/17_1_8.mp3" id="audio4"></audio> <!-- This is Van, thank u msg -->
+	
+	<div class="div-kiddo" id="div_start">
+		<img src="screens/3_1.png">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio1')"></i>
+		<!-- Auswahl Juli oder Party -->
+		<button type="button" onclick="swDiv(div_start, div_2)" id="btn_2" class="filled_button" name="btn_2e">Man Moe, mach dass du zurück zu Van kommst</button>
+		<button type="button" onclick="swDiv(div_start, div_2)" id="btn_3" class="filled_button" name="btn_riddle3">Junge, das geht gar nicht</button>
+	</div>
+
+	<div id="div_2" hidden>
+		<img src="screens/3_1.png">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio2')"></i>
+		<button type="button" onclick="swDiv(div_2, div_3)" id="btn_2" class="filled_button" name="btn_2e">Meld dich einfach schnell bei ihr...</button>
+	</div>
+
+	<div id="div_3" hidden>
+		<img src="screens/3_1.png">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio3')"></i>
+		<button type="button" onclick="swDiv(div_3, div_end)" id="btn_2" class="filled_button" name="btn_2e">Sure. Now get going</button>
+	</div>
+
+	<div id="div_end" hidden>
+		<img src="screens/17_0.png">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio4')"></i>
+		<button type="button" onclick="window.open('stis.html')"id="btn_riddle" class="filled_button" name="btn_riddle">Weitere Infos zu STIs & Verhütung</button>
+		<button type="button" onclick="location.href='end.html'" id="btn_riddle" class="filled_button" name="btn_riddle">Weiter
+
+
+	</div>
+
+
+
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+
+</body>
+</html>

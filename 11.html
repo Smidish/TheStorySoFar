@@ -9,16 +9,18 @@
 
 
 <body>
-	<audio src="" id="audio"></audio>
+	<audio src="audio/11.mp3" id="audio1"></audio>
 	
 	<div class="div-kiddo" id="div_start">
 		<img class="juli">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio1')"></i>
 
-		<button type="button" onclick="swDiv(div_start, div_juli)" id="btn_2" class="filled_button" name="btn_2e">Zu Juli</button>
+		<button type="button" onclick="swDiv(div_start, div_juli1)" id="btn_2" class="filled_button" name="btn_2e">Zur Bahn sprinten</button>
+		<button type="button" onclick="swDiv(div_start, div_juli1)" id="btn_2" class="filled_button" name="btn_2e">Zu Juli laufen</button>
 	</div>
 
 		<!-- Loc Juli--> 
-		<div id="div_juli" hidden>
+		<div id="div_juli1" hidden>
 			<img class="juli">
 			<a href="https://www.google.com/maps/search/?api=1&query=52.11711562906276, 11.628158606147577"><button type="button" id="btn_loc4" class="round_button" name="btn_loc4" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
 		</div>

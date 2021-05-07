@@ -9,24 +9,52 @@
 
 
 <body>
-	<audio src="" id="audio"></audio>
-	
+	<audio src="audio/17_0.mp3" id="audio1"></audio> <!-- msg audio-->
+	<audio src="audio/17_1.mp3" id="audio2"></audio> <!-- stottenrd-->
+	<audio src="audio/17_1_2.mp3" id="audio3"></audio> <!--the story -->
+	<audio src="audio/17_1_3.mp3" id="audio4"></audio> <!-- opt pille holen-->
+	<audio src="audio/17_1_4.mp3" id="audio5"></audio> <!-- opt mo suchen -->
+
 	<div class="div-kiddo" id="div_start">
-		<img src="screens/17_1.png">
-		<!-- Auswahl Juli oder Party -->
-		<button type="button" onclick="swDiv(div_start, div_moe)" id="btn_2" class="filled_button" name="btn_2e">Moe finden</button>
-		<button type="button" onclick="swDiv(div_start, div_apo)" id="btn_3" class="filled_button" name="btn_riddle3">In die Apotheke</button>
+		<img class="van">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio1')"></i>
+		<button type="button" onclick="swDiv(div_start, div_2)" id="btn_2" class="filled_button" name="btn_2e">Hey, ich bin in 2 Sekunden da!</button>
+	</div>
+
+	<div id="div_2" hidden>
+		<img class="van">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio2')"></i>
+		<button type="button" onclick="swDiv(div_2, div_dec)" id="btn_2" class="filled_button" name="btn_2e">Was ist passiert?</button>
+	</div>
+	
+	<div class="" id="div_dec" hidden>
+		<img class="van">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio3')"></i>
+		<button type="button" onclick="swDiv(div_dec, div_moe)" id="btn_2" class="filled_button" name="btn_2e">Moe finden</button>
+		<button type="button" onclick="swDiv(div_dec, div_apo)" id="btn_3" class="filled_button" name="btn_riddle3">In die Apotheke</button>
 	</div>
 
 		<!-- Opt Moe--> 
 		<div id="div_moe" hidden>
+			<img class="van">
+			<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio5')"></i>
+			<button type="button" onclick="swDiv(div_moe, div_moe2)" id="btn_2" class="filled_button" name="btn_2e">Auf die Suche machen</button>
+		</div>
+
+		<div id="div_moe2" hidden>
 			<img class="moe">
 			<a href="https://www.google.com/maps/search/?api=1&query=52.119776184259194, 11.635289571760225"><button type="button" id="btn_loc4" class="round_button" name="btn_loc4" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
 		</div>
 
 		<!-- Opt Apotheke--> 
 		<div id="div_apo" hidden>
-			<img src="">
+			<img class="van">
+			<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio4')"></i>
+			<button type="button" onclick="swDiv(div_apo, div_apo2)" id="btn_3" class="filled_button" name="btn_riddle3">Pille organisieren</button>
+		</div>
+
+		<div id="div_apo2" hidden>
+			<img src="screens/18_1.png">
 			<a href="https://www.google.com/maps/search/?api=1&query=52.12622345431383, 11.633691628707417"><button type="button" id="btn_loc1" class="round_button" name="btn_loc1" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
 		</div>
 

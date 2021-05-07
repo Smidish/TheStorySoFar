@@ -9,51 +9,39 @@
 
 
 <body>
-	<audio src="" id="audio"></audio>
+	<audio src="audio/2_1.mp3" id="audio1"></audio>
+	<audio src="audio/2_2.mp3" id="audio2"></audio>
 	
-	<img id="person_img" src="screens/2_1.png">
-	<img id="img_2" src="screens/riddle1.png" hidden>
-	<img id="img_3" src="screens/2_2.png" hidden>
-	<div class="div-kiddo">
+		
+	<div class="div-kiddo" id="div_start">
+		<img id="person_img" src="screens/2_1.png">
 
 		<!-- Play/Pause Button --> 
-		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play()"></i>
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio1')"></i>
 
-
-		<!-- Text Input --> 
-		<input type="text" id="answer" class="input_field" name="answer" hidden/>
 
 		<!-- Select Button --> 
-		<button type="button" onclick="switchPic()" id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
+		<button hidden type="button" onclick="switchPic()" id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
+		<button type="button" onclick="swDiv(div_start, div_weiter)" id="" class="filled_button" name="">Joar, hast recht...</button>
+		<button type="button" onclick="swDiv(div_start, div_weiter)" id="" class="filled_button" name="">Wieso? Finde es cool</button>
 
+	</div>
+	<div class="" id="div_weiter" hidden>
+		<img id="img_3" src="screens/2_1.png" >
 
-		<button hidden type="button" onclick="getInputValue();" class="filled_button" id="btn_input">Antworten</button>
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio2')"></i>
+		<button type="button" onclick="swDiv(div_weiter, div_weiter2)" id="" class="filled_button" name="">Zurück zu den Anderen</button>
+	
+	</div>
+	<div class="" id="div_weiter2" hidden>
+		<img id="img_3" src="screens/2_2.png" >
 
+	
 
 		<!-- Navi button --> 
-		<a id="nav_btn" hidden href="https://www.google.com/maps/search/?api=1&query=52.116215, 11.629097"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+		<a id="nav_btn" href="https://www.google.com/maps/search/?api=1&query=52.116215, 11.629097"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+	
 	</div>
-
-
-		<script>
-        function getInputValue(){
-            // Selecting the input element and get its value 
-            var inputVal = document.getElementById("answer").value;
-            if(inputVal == "51241"){
-            	document.getElementById("nav_btn").style.display = "block";
-            	document.getElementById('img_2').style.display = "none";
-            	document.getElementById('answer').style.display = "none";
-            	document.getElementById('btn_input').style.display = "none";
-            	document.getElementById('img_3').style.display = "block";
-            	document.getElementById('play').style.display = "block";
-            	document.getElementById('audio').src="content/Vangelis-Conquest-Of-Paradise.mp3";
-
-            }
-            else{
-            	 alert("Nope");
-            }
-        }
-    	</script>
 
 
 	<script src="jquery-3.6.0.min.js"></script>

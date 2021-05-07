@@ -9,31 +9,45 @@
 
 
 <body>
-	<audio src="" id="audio"></audio>
+	<audio src="audio/3_1.mp3" id="audio1"></audio>
+	<audio src="audio/3_2.mp3" id="audio2"></audio>
+	<audio src="audio/3_3.mp3" id="audio3"></audio>
 	
-	<img id="person_img" src="screens/3_1.png">
-	<img id="img_2" src="screens/riddle1.png" hidden>
-	<img id="img_3" src="screens/3_2.png" hidden>
-	<div class="div-kiddo">
-
+	<div class="div-kiddo" id="div_start">
+		<img id="person_img" src="screens/3_1.png">
 		<!-- Play/Pause Button --> 
-		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play()"></i>
-		<i hidden class="fas-middle fas fa-play fa-8x" id="play2" onclick="play2()"></i>
-
-
-
-		<!-- Text Input --> 
-		<input type="text" id="answer" class="input_field" name="answer" hidden/>
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio1')"></i>
 
 		<!-- Select Button --> 
-		<button type="button" onclick="switchPic()" id="btn_riddle" class="filled_button" name="btn_riddle">Weiter</button>
+		<button type="button" onclick="switchPic()" id="btn_riddle" class="filled_button" name="btn_riddle" hidden>Weiter</button>
+		<button type="button" onclick="swDiv(div_start, div_2)" id="" class="filled_button" name="">Echt? Zeig her!</button>
+		<button type="button" onclick="swDiv(div_start, div_2)" id="" class="filled_button" name="">Du bist einfach schon zu</button>	
+	</div>
 
+	<div id="div_2" hidden>
+		<img id="person_img" src="screens/3_1.png">
 
-		<button hidden type="button" onclick="getInputValue();" class="filled_button" id="btn_input">Antworten</button>
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio2')"></i>
+		<button type="button" onclick="swDiv(div_2, div_riddle)" id="" class="filled_button" name="">Let's go!</button>
+	</div>
 
+	<div id="div_riddle" hidden>
+		<img id="img_2" src="screens/riddle1.png">
+		<!-- Text Input --> 
+		<input type="text" id="answer" class="input_field" name="answer"/>
+		<button type="button" onclick="getInputValue();" class="filled_button" id="btn_input">Antworten</button>
 
-		<!-- Navi button --> 
-		<a id="nav_btn" hidden href="https://www.google.com/maps/search/?api=1&query=52.119438883102745, 11.63087307935136"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
+	</div>
+
+	<div id="div_3" hidden>
+		<img id="person_img" src="screens/3_1.png">
+		<i class="fas-middle fas fa-play fa-8x" id="play" onclick="play('audio3')"></i>
+		<button type="button" onclick="swDiv(div_3, div_nav)" id="" class="filled_button" name="">Den Anderen joinen</button>
+	</div>
+
+	<div id="div_nav" hidden>
+		<img id="img_3" src="screens/3_2.png">
+		<a id="nav_btn" href="https://www.google.com/maps/search/?api=1&query=52.119438883102745, 11.63087307935136"><button type="button" id="btn_loc" class="round_button" name="btn_loc" ><i class="fas fa-map-marked-alt fa-2x"></i></button></a>
 	</div>
 
 
@@ -42,13 +56,14 @@
             // Selecting the input element and get its value 
             var inputVal = document.getElementById("answer").value;
             if(inputVal == "51241"){
-            	document.getElementById("nav_btn").style.display = "block";
-            	document.getElementById('img_2').style.display = "none";
-            	document.getElementById('answer').style.display = "none";
-            	document.getElementById('btn_input').style.display = "none";
-            	document.getElementById('img_3').style.display = "block";
-				document.getElementById('play').style.display = "block";
-				document.getElementById('audio').src="";
+            	swDiv(div_riddle, div_3);
+            	//document.getElementById("nav_btn").style.display = "block";
+            	//document.getElementById('img_2').style.display = "none";
+            	//document.getElementById('answer').style.display = "none";
+            	//document.getElementById('btn_input').style.display = "none";
+            	//document.getElementById('img_3').style.display = "block";
+				//document.getElementById('play').style.display = "block";
+				//document.getElementById('audio').src="";
             }
             else{
             	 alert("Nope");
